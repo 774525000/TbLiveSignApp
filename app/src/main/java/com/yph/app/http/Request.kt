@@ -13,15 +13,14 @@ object Request {
     private val retrofit =
         Retrofit.Builder().client(object : OkHttpClient() {
             override fun proxy(): Proxy? {
-                /*return Proxy.NO_PROXY*/
-                return super.proxy()
+                return Proxy.NO_PROXY
+                // return super.proxy()
             }
         }).baseUrl(App.baseUrl).addConverterFactory(GsonConverterFactory.create())
             .build()
     private val signService = retrofit.create(SignService::class.java)
 
-    fun getSign(callback: Callback<ResponseBody>) {
-        val params = hashMapOf("data" to "{}")
-        signService.getSign("http://www.baidu.com").enqueue(callback)
+    fun getSign(path: String, callback: Callback<ResponseBody>) {
+        signService.getSign(path).enqueue(callback)
     }
 }
