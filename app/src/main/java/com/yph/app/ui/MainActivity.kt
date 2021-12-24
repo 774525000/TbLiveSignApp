@@ -1,6 +1,5 @@
 package com.yph.app.ui
 
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -11,7 +10,6 @@ import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.net.URI
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
