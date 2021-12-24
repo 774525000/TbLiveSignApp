@@ -178,7 +178,6 @@
                         android:autofillHints=""
                         android:gravity="top"
                         android:inputType="textMultiLine"
-                        android:maxLines="10"
                         android:minLines="5" />
                 </LinearLayout>
 

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import com.yph.app.databinding.ActivityMainBinding
 import com.yph.app.http.Request
-import com.yph.app.model.Sign
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,14 +28,14 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun getSign() {
-        Request.getSign(object : Callback<Sign> {
-            override fun onResponse(call: Call<Sign>, response: Response<Sign>) {
+        Request.getSign(object : Callback<ResponseBody> {
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 response.body()?.apply {
-                    binding.resEdit.text = Editable.Factory.getInstance().newEditable(xSign)
+                    binding.resEdit.text = Editable.Factory.getInstance().newEditable(string())
                 }
             }
 
-            override fun onFailure(call: Call<Sign>, t: Throwable) {
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 println(t.message)
             }
 

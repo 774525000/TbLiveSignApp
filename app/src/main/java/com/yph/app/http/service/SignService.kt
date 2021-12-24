@@ -1,12 +1,12 @@
 package com.yph.app.http.service
 
-import com.yph.app.model.Sign
+import okhttp3.ResponseBody
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.GET
+import retrofit2.http.Url
 
 
 interface SignService {
-    @POST("/")
-    fun getSign(@Body p1: HashMap<String, String>): Call<Sign>
+    @GET
+    fun getSign(@Url p2: String): Call<ResponseBody>
 }
