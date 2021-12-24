@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RequestApp</string>
+    <string name="path_label">path</string>
+    <string name="v_label">v</string>
+    <string name="params_label">params</string>
+    <string name="headers_label">headers</string>
+    <string name="res_label">result</string>
+    <string name="method_label">method</string>
+
+    <string-array name="method_array">
+        <item>GET</item>
+        <item>POST</item>
+    </string-array>
+</resources>
