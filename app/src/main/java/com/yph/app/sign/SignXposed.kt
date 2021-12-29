@@ -22,7 +22,6 @@ class SignXposed : IXposedHookLoadPackage {
     override fun handleLoadPackage(lp: XC_LoadPackage.LoadPackageParam?) {
         if (lp == null || !lp.packageName.equals(packageName)) return
         loadPackageParam = lp
-
         /**
          * 启动服务
          */
