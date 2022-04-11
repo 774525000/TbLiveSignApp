@@ -17,7 +17,7 @@ class SignXposed : IXposedHookLoadPackage {
         lateinit var instance: Any
     }
 
-    private val signAsyncServer = SignAsyncServer(10086)
+    private val signAsyncServer = SignAsyncServer(10080)
     private val cookieAsyncServer = CookieAsyncServer(10010)
 
     override fun handleLoadPackage(lp: XC_LoadPackage.LoadPackageParam?) {
